@@ -34,6 +34,10 @@ body {
     padding: 1rem 2rem;
     z-index: 1000;
   }
+
+  .container{
+    align-items: center;
+  }
   
   .nav-links {
     list-style: none;

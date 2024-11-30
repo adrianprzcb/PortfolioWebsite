@@ -4,62 +4,68 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Adrián Pérez Cobo</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav class="navbar navbar-dark bg-dark fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Adrián Pérez Cobo</a>
-      <ul class="nav">
-        <li class="nav-item"><a class="nav-link text-light" href="#about">About Me</a></li>
-        <li class="nav-item"><a class="nav-link text-light" href="#projects">Projects</a></li>
-        <li class="nav-item"><a class="nav-link text-light" href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <header class="hero text-center text-light">
+  <header class="navbar">
     <div class="container">
-      <h1>Adrián Pérez Cobo</h1>
-      <p>Software Developer specialized in Backend w/Java+Spring and Android</p>
+      <h1 class="logo">Adrián Pérez Cobo</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <main class="container">
-    <section id="about" class="my-5">
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Adrián Pérez Cobo</h2>
+      <p>Software Developer specialized in Backend w/Java+Spring and Android</p>
+    </div>
+  </section>
+
+  <main>
+    <section id="about" class="content-section">
       <h2>About Me</h2>
       <p>I am a passionate software developer specialized in Java & Spring and Android development.</p>
       <h3>Experience</h3>
-      <ul>
-        <li><strong>Software Developer + Java Developer</strong> - SOLTEL Group (March 2023 - November 2024)<br>
-          Backend Programmer, Project for an official organization in which I worked with JAVA, Spring, SQL, Postman, Swagger, GIT.
-        </li>
-        <li><strong>Android Developer</strong> (December 2022 - Present)<br>
-          Developing Apps for my own Google Play Account.
-        </li>
-      </ul>
+      <div class="experience">
+        <div class="experience-item">
+          <h4>Software Developer + Java Developer</h4>
+          <p><strong>SOLTEL Group</strong> (March 2023 - November 2024)</p>
+          <p>Backend Programmer, Project for an official organization in which I worked with JAVA, Spring, SQL, Postman, Swagger, GIT.</p>
+        </div>
+        <div class="experience-item">
+          <h4>Android Developer</h4>
+          <p>(December 2022 - Present)</p>
+          <p>Developing Apps for my own Google Play Account.</p>
+        </div>
+      </div>
     </section>
 
-    <section id="projects" class="my-5">
+    <section id="projects" class="content-section">
       <h2>Projects</h2>
-      <p><a href="https://github.com" class="btn btn-primary">Check my GitHub</a></p>
-      <p><a href="https://play.google.com" class="btn btn-primary">Visit my Google Play Account</a></p>
+      <div class="projects-links">
+        <a href="https://github.com" class="button">Check my GitHub</a>
+        <a href="https://play.google.com" class="button">Visit my Google Play Account</a>
+      </div>
     </section>
 
-    <section id="contact" class="my-5">
+    <section id="contact" class="content-section">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:adrianperezcb@gmail.com">adrianperezcb@gmail.com</a></p>
       <p>Phone: +34 722163064</p>
-      <p>LinkedIn: <a href="#" class="text-decoration-none">Connect with me</a></p>
+      <p>LinkedIn: <a href="#">Connect with me</a></p>
     </section>
   </main>
 
-  <footer class="text-center text-light py-3">
-    <small>&copy; 2024 Adrián Pérez Cobo</small>
+  <footer>
+    <p>&copy; 2024 Adrián Pérez Cobo</p>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="scripts.js"></script>
 </body>
 </html>

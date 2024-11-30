@@ -1,22 +1,18 @@
+/* General Styles */
 body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
     background-color: #121212;
     color: #e0e0e0;
-    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
   }
   
-  .hero {
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #212121;
-  }
-  
-  h1, h2, h3 {
-    color: #bb86fc;
+  h1, h2, h3, h4 {
+    margin: 0;
   }
   
   a {
+    text-decoration: none;
     color: #03dac6;
   }
   
@@ -24,7 +20,105 @@ body {
     color: #bb86fc;
   }
   
-  footer {
+  /* Navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
     background-color: #1f1f1f;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    z-index: 1000;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    color: #e0e0e0;
+    font-weight: bold;
+  }
+  
+  .nav-links a:hover {
+    color: #bb86fc;
+  }
+  
+  /* Hero Section */
+  .hero {
+    height: 100vh;
+    background: linear-gradient(to bottom, #1f1f1f, #121212);
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+  }
+  
+  .hero h2 {
+    font-size: 2.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+  
+  /* Content Sections */
+  .content-section {
+    padding: 4rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .content-section h2 {
+    color: #bb86fc;
+    margin-bottom: 1rem;
+  }
+  
+  .experience {
+    margin-top: 1rem;
+  }
+  
+  .experience-item {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Projects Section */
+  .projects-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .button {
+    padding: 0.8rem 1.5rem;
+    background-color: #03dac6;
+    color: #121212;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .button:hover {
+    background-color: #bb86fc;
+    color: #fff;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
   }
   

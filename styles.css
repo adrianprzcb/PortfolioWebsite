@@ -103,12 +103,12 @@ a:hover {
 
 /* Content Sections */
 .content-section {
-  padding: 4rem 2rem; /* Top-bottom: 4rem, Left-right: 2rem */
+  padding: 4rem 4rem; /* Top-bottom: 4rem, Left-right: 2rem */
   margin: 0 auto; /* Centers the section horizontally */
   background-color: var(--background-color);
   color: var(--text-color);
   text-align: left; /* Aligns text to the left */
-  max-width: 800px; /* Limits the section's width for compactness */
+  max-width: 500px; /* Limits the section's width for compactness */
 }
 
 @media (max-width: 768px) {

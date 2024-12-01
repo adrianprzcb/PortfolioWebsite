@@ -115,6 +115,14 @@ a:hover {
   margin-bottom: 1rem;
 }
 
+
+.content-section h3{
+  font-size: 1.75rem; /* Adjust the size as needed */
+  line-height: 1.3;   /* Optional: Adjust spacing between lines */
+  margin-bottom: 1rem; /* Optional: Add spacing below the heading */
+  font-weight: bold;   /* Optional: Make it stand out */
+  color: var(--text-color); /* Ensure it adapts to the theme */
+}
 .experience-item {
   margin-bottom: 2rem;
 }

@@ -108,7 +108,7 @@ a:hover {
   background-color: var(--background-color);
   color: var(--text-color);
   text-align: left; /* Aligns text to the left */
-  max-width: 560px; /* Limits the section's width for compactness */
+  max-width: 510px; /* Limits the section's width for compactness */
   text-align: center;
   align-items: center;
 }

@@ -8,7 +8,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
   });
   
 
-  // Theme Toggle
+// Theme Toggle
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 
@@ -16,15 +16,15 @@ const body = document.body;
 const savedTheme = localStorage.getItem('theme') || 'dark';
 if (savedTheme === 'light') {
   body.classList.add('light-theme');
-  themeToggle.textContent = '🌙';
+  themeToggle.textContent = '🌙'; // Set to moon icon for light mode
 }
 
-// Toggle theme
+// Toggle theme on button click
 themeToggle.addEventListener('click', () => {
   body.classList.toggle('light-theme');
   const isLightTheme = body.classList.contains('light-theme');
-  themeToggle.textContent = isLightTheme ? '🌙' : '☀️';
+  themeToggle.textContent = isLightTheme ? '🌙' : '☀️'; // Switch icons
 
-  // Save theme to localStorage
+  // Save theme choice to localStorage
   localStorage.setItem('theme', isLightTheme ? 'light' : 'dark');
 });

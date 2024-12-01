@@ -1,28 +1,43 @@
-/* General Styles */
-/* General Theme Styles */
+/* General Theme Variables */
 :root {
   --background-color: #121212;
   --text-color: #e0e0e0;
   --link-color: #03dac6;
   --link-hover-color: #bb86fc;
   --section-background: #1f1f1f;
+  --button-background: #03dac6;
+  --button-hover-background: #bb86fc;
+  --button-text-color: #121212;
 }
 
+/* Light Theme Variables */
 .light-theme {
   --background-color: #ffffff;
   --text-color: #121212;
   --link-color: #007BFF;
   --link-hover-color: #0056b3;
   --section-background: #f8f9fa;
+  --button-background: #007BFF;
+  --button-hover-background: #0056b3;
+  --button-text-color: #ffffff;
 }
 
-/* Apply theme variables */
+/* Base Styles */
 body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+  margin: 0;
 }
 
 a {
+  text-decoration: none;
   color: var(--link-color);
 }
 
@@ -30,227 +45,154 @@ a:hover {
   color: var(--link-hover-color);
 }
 
-.content-section {
-  background-color: var(--section-background);
-}
-
-/* Theme Toggle Button */
-.theme-toggle {
-  background-color: #121212;
-  border: none;
-  color: var(--text-color);
-  font-size: 1.5rem;
-  cursor: pointer;
-  position: absolute;
-  top: 1rem;
-  right: 2rem;
-  z-index: 1100;
-}
-
-
-.theme-toggle:hover {
-  opacity: 0.8;
-}
-
-
-
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #121212;
-    color: #e0e0e0;
-    line-height: 1.6;
-    align-items: center;
-  }
-  
-  h1, h2, h3, h4 {
-    margin: 0;
-  }
-  
-  a {
-    text-decoration: none;
-    color: #03dac6;
-  }
-  
-  a:hover {
-    color: #bb86fc;
-  }
-  
 /* Navbar */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #121212;
+  background-color: var(--background-color);
   display: flex;
-  align-items: center; /* Ensures vertical centering */
-  justify-content: center; /* Aligns the entire navbar content horizontally */
-  padding: 1rem;
-  z-index: 1000;
-  box-sizing: border-box; /* Ensures padding is included in total dimensions */
-}
-
-.navbar .container {
-  display: flex;
-  justify-content: center; /* Centers the nav-links inside the container */
+  justify-content: center;
   align-items: center;
-  width: 100%;
-  max-width: 1200px; /* Optional: To keep the navbar content centered with a max-width */
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
 .nav-links {
   display: flex;
-  gap: 2rem; /* Spacing between navbar items */
+  gap: 2rem;
   list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links li {
-  display: flex;
 }
 
 .nav-links a {
-  text-decoration: none;
-  color: #e0e0e0;
-  font-weight: 500;
+  color: var(--text-color);
   font-size: 1rem;
-  padding: 0.5rem 1rem;
   transition: color 0.3s;
 }
 
 .nav-links a:hover {
-  color: #bb86fc; /* Adds a hover effect */
+  color: var(--link-hover-color);
 }
 
-  
-  /* Hero Section */
-  .hero {
-    height: 100vh;
-    background: linear-gradient(to bottom, #121212, #121212);
-    color: #e0e0e0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 2rem;
-  }
-  
-  .hero h2 {
-    font-size: 2.5rem;
-  }
-  
-  .hero p {
-    font-size: 1.2rem;
-    margin-top: 1rem;
-  }
-  
-  /* Content Sections */
-  .content-section {
-    padding: 4rem 2rem;
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-    background-color: #121212;
-  }
-  
-  .content-section h2 {
-    color: #bb86fc;
-    margin-bottom: 1rem;
-  }
-  
-  .experience {
-    margin-top: 1rem;
-  }
-  
-  .experience-item {
-    margin-bottom: 1.5rem;
-  }
-  
-  /* Projects Section */
-  .projects-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  
-  .button {
-    padding: 0.8rem 1.5rem;
-    background-color: #03dac6;
-    color: #121212;
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-weight: bold;
-    transition: background 0.3s;
-  }
-  
-  .button:hover {
-    background-color: #bb86fc;
-    color: #fff;
-  }
-  
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 1rem 0;
-    background-color: #1f1f1f;
-    color: #e0e0e0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-  }
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: var(--background-color);
+  color: var(--text-color);
+  padding: 2rem;
+}
 
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
 
-  .project-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .project-item {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    background-color: #1f1f1f;
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    border-radius: 8px;
-    transition: transform 0.3s, background-color 0.3s;
-  }
-  
-  .project-item:hover {
-    transform: translateY(-5px);
-    background-color: #2b2b2b;
-  }
-  
-  .project-link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: inherit;
-    width: 100%;
-  }
-  
-  .project-logo {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-  }
-  
-  .project-details {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .project-details h3 {
-    margin: 0;
-    color: #bb86fc;
-    font-size: 1.25rem;
-  }
-  
-  .project-details p {
-    margin: 0.5rem 0 0;
-    font-size: 0.95rem;
-    color: #e0e0e0;
-  }
-  
+.hero p {
+  font-size: 1.25rem;
+  max-width: 600px;
+}
+
+/* Content Sections */
+.content-section {
+  padding: 4rem 2rem;
+  background-color: var(--section-background);
+  color: var(--text-color);
+  text-align: center;
+}
+
+.content-section h2 {
+  color: var(--link-hover-color);
+  margin-bottom: 1rem;
+}
+
+.experience-item {
+  margin-bottom: 2rem;
+}
+
+/* Projects Section */
+.project-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-item {
+  display: flex;
+  align-items: center;
+  background-color: var(--section-background);
+  border: 1px solid var(--background-color);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+  background-color: var(--background-color);
+}
+
+.project-logo {
+  width: 80px;
+  height: 80px;
+  margin-right: 1rem;
+}
+
+.project-details h3 {
+  margin: 0;
+  color: var(--link-hover-color);
+}
+
+.project-details p {
+  margin: 0.5rem 0 0;
+  color: var(--text-color);
+}
+
+/* Buttons */
+.button {
+  padding: 0.8rem 1.5rem;
+  background-color: var(--button-background);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: var(--button-hover-background);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--section-background);
+  color: var(--text-color);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1100;
+  transition: opacity 0.3s;
+}
+
+.theme-toggle:hover {
+  opacity: 0.8;
+}

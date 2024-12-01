@@ -104,6 +104,7 @@ a:hover {
   background-color: var(--section-background);
   color: var(--text-color);
   text-align: center;
+  align-items: center;
 }
 
 .content-section h2 {

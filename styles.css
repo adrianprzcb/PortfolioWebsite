@@ -184,7 +184,6 @@ footer {
 /* Theme Toggle Button */
 .theme-toggle {
   position: absolute;
-  top: 1rem;
   background: none;
   border: none;
   color: var(--text-color);

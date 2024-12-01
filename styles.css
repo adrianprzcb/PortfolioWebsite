@@ -108,7 +108,9 @@ a:hover {
   background-color: var(--background-color);
   color: var(--text-color);
   text-align: left; /* Aligns text to the left */
-  max-width: 500px; /* Limits the section's width for compactness */
+  max-width: 550px; /* Limits the section's width for compactness */
+  text-align: center;
+  align-items: center;
 }
 
 @media (max-width: 768px) {
@@ -147,6 +149,7 @@ h2{
   padding: 10;
   margin: 0;
   align-items: center;
+  text-align: center;
 }
 
 .project-item {

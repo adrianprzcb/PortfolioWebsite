@@ -27,4 +27,8 @@ themeToggle.addEventListener('click', () => {
 
   // Save theme choice to localStorage
   localStorage.setItem('theme', isLightTheme ? 'light' : 'dark');
+
+  console.log('Theme toggle script loaded'); // Log when the script loads
+console.log(themeToggle); // Log the button element
+
 });

@@ -185,7 +185,6 @@ footer {
 .theme-toggle {
   position: absolute;
   top: 1rem;
-  right: 2rem;
   background: none;
   border: none;
   color: var(--text-color);

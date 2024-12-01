@@ -1,4 +1,58 @@
 /* General Styles */
+/* General Theme Styles */
+:root {
+  --background-color: #121212;
+  --text-color: #e0e0e0;
+  --link-color: #03dac6;
+  --link-hover-color: #bb86fc;
+  --section-background: #1f1f1f;
+}
+
+.light-theme {
+  --background-color: #ffffff;
+  --text-color: #121212;
+  --link-color: #007BFF;
+  --link-hover-color: #0056b3;
+  --section-background: #f8f9fa;
+}
+
+/* Apply theme variables */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--link-color);
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+.content-section {
+  background-color: var(--section-background);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  z-index: 1100;
+}
+
+.theme-toggle:hover {
+  opacity: 0.8;
+}
+
+
+
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;

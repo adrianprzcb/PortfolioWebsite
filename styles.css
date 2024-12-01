@@ -118,8 +118,9 @@ a:hover {
 /* Projects Section */
 .project-list {
   list-style: none;
-  padding: 0;
+  padding: 10;
   margin: 0;
+  align-items: center;
 }
 
 .project-item {

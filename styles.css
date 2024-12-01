@@ -105,7 +105,7 @@ a:hover {
 .content-section {
   padding: 4rem 2rem; /* Top-bottom: 4rem, Left-right: 2rem */
   margin: 0 auto; /* Centers the section horizontally */
-  background-color: var(--section-background);
+  background-color: var(--background-color);
   color: var(--text-color);
   text-align: left; /* Aligns text to the left */
   max-width: 800px; /* Limits the section's width for compactness */

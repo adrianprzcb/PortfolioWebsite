@@ -36,7 +36,7 @@ a:hover {
 
 /* Theme Toggle Button */
 .theme-toggle {
-  background: none;
+  background-color: #121212;
   border: none;
   color: var(--text-color);
   font-size: 1.5rem;
@@ -46,6 +46,7 @@ a:hover {
   right: 2rem;
   z-index: 1100;
 }
+
 
 .theme-toggle:hover {
   opacity: 0.8;
@@ -150,6 +151,7 @@ body {
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
+    background-color: #121212;
   }
   
   .content-section h2 {

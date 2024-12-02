@@ -128,7 +128,6 @@ a:hover {
   text-align: center;
   align-items: center;
   border-width: 2ch;
-  border-color: #0056b3;
 }
 
 @media (max-width: 768px) {

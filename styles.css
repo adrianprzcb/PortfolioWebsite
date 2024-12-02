@@ -103,7 +103,20 @@ a:hover {
 }
 
 /* Content Sections */
-.content-section {
+.content-section-am {
+  padding: 4rem 4rem; /* Top-bottom: 4rem, Left-right: 2rem */
+  margin: 0 auto; /* Centers the section horizontally */
+  background-color: var(--background-color);
+  color: var(--text-color);
+  text-align: left; /* Aligns text to the left */
+  max-width: 600px; /* Limits the section's width for compactness */
+  text-align: center;
+  align-items: center;
+  border-width: 2ch;
+  border-color: #0056b3;
+}
+
+.content-section-ct {
   padding: 4rem 4rem; /* Top-bottom: 4rem, Left-right: 2rem */
   margin: 0 auto; /* Centers the section horizontally */
   background-color: var(--background-color);

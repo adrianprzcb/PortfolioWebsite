@@ -159,15 +159,11 @@ h2{
   margin: 0 auto; 
   background-color: var(--background-color);
   color: var(--text-color);
-  text-align: left; 
-  text-align: center;
-  align-items: center;
   list-style: none;
 }
 
 .project-item {
   display: flex;
-  align-items: center;
   background-color: var(--section-background);
   border: 1px solid var(--background-color);
   border-radius: 8px;

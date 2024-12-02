@@ -185,6 +185,8 @@ h2{
   width: 80px;
   height: 80px;
   margin-right: 1rem;
+  flex-shrink: 0; /* Prevent the logo from shrinking */
+
 }
 
 .project-details h3 {

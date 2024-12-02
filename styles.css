@@ -29,6 +29,7 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   line-height: 1.6;
+
 }
 
 /* Typography */
@@ -108,9 +109,11 @@ a:hover {
   background-color: var(--background-color);
   color: var(--text-color);
   text-align: left; /* Aligns text to the left */
-  max-width: 510px; /* Limits the section's width for compactness */
+  max-width: 600px; /* Limits the section's width for compactness */
   text-align: center;
   align-items: center;
+  border-width: 2ch;
+  border-color: #0056b3;
 }
 
 @media (max-width: 768px) {

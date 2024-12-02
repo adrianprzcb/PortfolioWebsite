@@ -150,6 +150,8 @@ h2{
   margin-bottom: 2rem;
 }
 
+
+
 /* Projects Section */
 .project-list {
   max-width: 600px;
@@ -160,6 +162,7 @@ h2{
   text-align: left; 
   text-align: center;
   align-items: center;
+  list-style: none;
 }
 
 .project-item {

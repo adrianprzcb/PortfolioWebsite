@@ -104,7 +104,7 @@ a:hover {
 
 /* Content Sections */
 .content-section-am {
-  padding: 4rem 4rem; /* Top-bottom: 4rem, Left-right: 2rem */
+  padding: 2rem 4rem; /* Top-bottom: 4rem, Left-right: 2rem */
   margin: 0 auto; /* Centers the section horizontally */
   background-color: var(--background-color);
   color: var(--text-color);
@@ -112,8 +112,10 @@ a:hover {
   max-width: 600px; /* Limits the section's width for compactness */
   text-align: center;
   align-items: center;
-  border-width: 2ch;
-  border-color: #0056b3;
+  border-color: #121212;
+  border-width: 4ch;
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for the card effect */
 }
 
 .content-section-ct {

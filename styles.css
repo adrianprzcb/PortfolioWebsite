@@ -118,6 +118,20 @@ a:hover {
   margin-bottom: 8ch;
 }
 
+.content-section-projects {
+  padding: 2rem 4rem; /* Top-bottom: 4rem, Left-right: 2rem */
+  margin: 0 auto; /* Centers the section horizontally */
+  background-color: var(--background-color);
+  color: var(--text-color);
+  text-align: left; /* Aligns text to the left */
+  max-width: 600px; /* Limits the section's width for compactness */
+  text-align: center;
+  align-items: center;
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for the card effect */
+  margin-bottom: 8ch;
+}
+
 .content-section-ct {
   padding: 4rem 4rem; /* Top-bottom: 4rem, Left-right: 2rem */
   margin: 0 auto; /* Centers the section horizontally */
@@ -127,7 +141,9 @@ a:hover {
   max-width: 600px; /* Limits the section's width for compactness */
   text-align: center;
   align-items: center;
-  border-width: 2ch;
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for the card effect */
+  margin-bottom: 3ch;
 }
 
 @media (max-width: 768px) {
@@ -171,7 +187,6 @@ a:hover {
 .project-list {
   max-width: 600px; /* Restrict width for compactness */
   margin: 0 auto; /* Center the list horizontally */
-  padding: 2rem; /* Add spacing */
   list-style: none; /* Remove bullets */
 }
 

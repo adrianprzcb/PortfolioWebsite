@@ -112,8 +112,6 @@ a:hover {
   max-width: 600px; /* Limits the section's width for compactness */
   text-align: center;
   align-items: center;
-  border-color: #121212;
-  border-width: 4ch;
   border-radius: 15px; /* Rounded corners */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for the card effect */
 }

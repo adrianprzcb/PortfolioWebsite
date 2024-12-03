@@ -119,7 +119,7 @@ a:hover {
 }
 
 .content-section-projects {
-  padding: 2rem 2rem; /* Top-bottom: 4rem, Left-right: 2rem */
+  padding: 2rem 4rem; /* Top-bottom: 4rem, Left-right: 2rem */
   margin: 0 auto; /* Centers the section horizontally */
   background-color: var(--background-color);
   color: var(--text-color);
@@ -144,6 +144,13 @@ a:hover {
   border-radius: 15px; /* Rounded corners */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for the card effect */
   margin-bottom: 3ch;
+}
+
+
+.content-section-am:hover, 
+.content-section-projects:hover, 
+.content-section-ct:hover {
+  border: 2px solid var(--link-hover-color); /* Highlight border on hover */
 }
 
 @media (max-width: 768px) {

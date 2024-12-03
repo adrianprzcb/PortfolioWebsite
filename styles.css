@@ -1,50 +1,48 @@
 /* General Theme Variables */
 :root {
-  --background-color: #121212;
-  --text-color: #e0e0e0;
-  --link-color: #03dac6;
-  --link-hover-color: #622a2a;
-  --section-background: #1f1f1f;
-  --button-background: #03dac6;
-  --button-hover-background: #bb86fc;
-  --button-text-color: #121212;
-  
+  --background-color: #1a1a2e;
+  --text-color: #eaeaea;
+  --accent-color: #4ecca3;
+  --accent-hover-color: #20bf6b;
+  --section-background: #16213e;
+  --button-background: #4ecca3;
+  --button-hover: #20bf6b;
+  --font-family: 'Inter', sans-serif;
+  --border-radius: 12px;
 }
 
 /* Light Theme Variables */
 .light-theme {
   --background-color: #ffffff;
-  --text-color: #121212;
-  --link-color: #007BFF;
-  --link-hover-color: #0056b3;
+  --text-color: #1a1a2e;
+  --accent-color: #007BFF;
+  --accent-hover-color: #0056b3;
   --section-background: #f8f9fa;
-  --button-background: #007BFF;
-  --button-hover-background: #0056b3;
-  --button-text-color: #ffffff;
 }
 
-/* Base Styles */
+/* Global Reset */
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: var(--font-family);
   background-color: var(--background-color);
   color: var(--text-color);
-  line-height: 1.6;
-
+  line-height: 1.8;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 /* Typography */
-h1, h2, h3, h4 {
+h1, h2, h3 {
   margin: 0;
 }
 
 a {
   text-decoration: none;
-  color: var(--link-color);
+  color: var(--accent-color);
+  transition: color 0.3s;
 }
 
 a:hover {
-  color: var(--link-hover-color);
+  color: var(--accent-hover-color);
 }
 
 /* Navbar */
@@ -52,32 +50,41 @@ a:hover {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: var(--background-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+  background: var(--section-background);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  padding: 1rem 2rem;
 }
 
 .nav-links {
   display: flex;
+  justify-content: center;
   gap: 2rem;
   list-style: none;
-  margin: 0;
-  padding: 0;
-  align-items: center;
 }
 
 .nav-links a {
   color: var(--text-color);
-  font-size: 1rem;
-  transition: color 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.95rem;
 }
 
 .nav-links a:hover {
-  color: var(--link-hover-color);
+  color: var(--accent-hover-color);
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.theme-toggle:hover {
+  opacity: 0.8;
 }
 
 /* Hero Section */
@@ -103,110 +110,63 @@ a:hover {
   max-width: 600px;
 }
 
-/* Content Sections */
-.content-section-am {
-  padding: 2rem 4rem; /* Top-bottom: 4rem, Left-right: 2rem */
-  margin: 0 auto; /* Centers the section horizontally */
-  background-color: var(--background-color);
-  color: var(--text-color);
-  max-width: 600px; /* Limits the section's width for compactness */
-  text-align: center;
-  align-items: center;
-  border-radius: 15px; /* Rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for the card effect */
-  margin-bottom: 8ch;
-}
-
-.content-section-projects {
-  padding: 2rem 4rem; /* Top-bottom: 4rem, Left-right: 2rem */
-  margin: 0 auto; /* Centers the section horizontally */
-  background-color: var(--background-color);
-  color: var(--text-color);
-  text-align: left; /* Aligns text to the left */
-  max-width: 600px; /* Limits the section's width for compactness */
-  text-align: center;
-  align-items: center;
-  border-radius: 15px; /* Rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for the card effect */
-  margin-bottom: 8ch;
-}
-
+/* Section Styles */
+.content-section-am,
+.content-section-projects,
 .content-section-ct {
-  padding: 4rem 4rem; /* Top-bottom: 4rem, Left-right: 2rem */
-  margin: 0 auto; /* Centers the section horizontally */
-  background-color: var(--background-color);
+  padding: 2rem 4rem;
+  margin: 0 auto;
+  background-color: var(--section-background);
   color: var(--text-color);
-  text-align: left; /* Aligns text to the left */
-  max-width: 600px; /* Limits the section's width for compactness */
+  max-width: 700px;
   text-align: center;
-  align-items: center;
-  border-radius: 15px; /* Rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for the card effect */
-  margin-bottom: 3ch;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 8ch;
+  transition: transform 0.3s, border 0.3s;
 }
 
-
-.content-section-am:hover, 
-.content-section-projects:hover, 
+.content-section-am:hover,
+.content-section-projects:hover,
 .content-section-ct:hover {
-  border: 2px solid var(--link-hover-color); /* Highlight border on hover */
+  transform: translateY(-5px);
+  border: 2px solid var(--accent-hover-color);
 }
 
-@media (max-width: 768px) {
-  .content-section-am ,
-  .content-section-ct,
-  .content-section-projects {
-    padding: 3rem 1.5rem; /* Smaller padding on smaller screens */
-    max-width: 90%; /* Keeps the section responsive */
-  }
-}
-
- h2 {
-  color: var(--link-hover-color);
+h2 {
+  color: var(--accent-hover-color);
   margin-bottom: 1rem;
-  align-items: center;
-  text-align: center;
   font-size: 2rem;
-
 }
 
-.content-section-projects h2 {
-  color: var(--link-hover-color);
+.content-section h3 {
+  font-size: 1.55rem;
   margin-bottom: 1rem;
-  align-items: center;
-  text-align: center;
+  font-weight: bold;
+  color: var(--text-color);
 }
 
-
-.content-section h3{
-  font-size: 1.55rem; /* Adjust the size as needed */
-  line-height: 1.3;   /* Optional: Adjust spacing between lines */
-  margin-bottom: 1rem; /* Optional: Add spacing below the heading */
-  font-weight: bold;   /* Optional: Make it stand out */
-  color: var(--text-color); /* Ensure it adapts to the theme */
-}
 .experience-item {
   margin-bottom: 2rem;
 }
 
-
-.exp-text{
+.exp-text {
   padding-top: 2rem;
 }
 
-
-
 /* Projects Section */
 .project-list {
-  max-width: 600px; /* Restrict width for compactness */
-  margin: 0 auto; /* Center the list horizontally */
-  list-style: none; /* Remove bullets */
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .project-item {
+  display: flex;
+  align-items: center;
   background-color: var(--section-background);
   border: 1px solid var(--background-color);
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   margin-bottom: 1.5rem;
   transition: transform 0.3s, background-color 0.3s;
 }
@@ -216,24 +176,21 @@ a:hover {
   background-color: var(--background-color);
 }
 
-/* Ensure the <a> tag works as a flex container */
 .project-link {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: inherit; /* Inherit text color for consistency */
+  color: inherit;
   padding: 1rem;
 }
 
-/* Style for the logo */
 .project-logo {
   width: 80px;
   height: 80px;
   margin-right: 1rem;
-  flex-shrink: 0; /* Prevent the logo from shrinking */
+  border-radius: 50%;
 }
 
-/* Style for the project details */
 .project-details {
   display: flex;
   flex-direction: column;
@@ -244,24 +201,21 @@ a:hover {
 .project-details h3 {
   margin: 0;
   font-size: 1.2rem;
-  color: var(--link-hover-color);
+  color: var(--accent-hover-color);
 }
 
 .project-details p {
   margin: 0.5rem 0 0;
-  color: var(--text-color);
   font-size: 1rem;
 }
-
-
 
 /* Buttons */
 .button {
   padding: 0.8rem 1.5rem;
   background-color: var(--button-background);
-  color: var(--button-text-color);
+  color: var(--text-color);
   border: none;
-  border-radius: 5px;
+  border-radius: var(--border-radius);
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
@@ -269,7 +223,7 @@ a:hover {
 }
 
 .button:hover {
-  background-color: var(--button-hover-background);
+  background-color: var(--button-hover);
 }
 
 /* Footer */
@@ -280,17 +234,24 @@ footer {
   color: var(--text-color);
 }
 
-/* Theme Toggle Button */
-.theme-toggle {
-  background: none;
-  border: none;
-  color: var(--text-color);
-  font-size: 1.5rem;
-  cursor: pointer;
-  transition: opacity 0.3s;
-  align-items: center;
-}
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .content-section-am,
+  .content-section-projects,
+  .content-section-ct {
+    padding: 2rem 1.5rem;
+    max-width: 90%;
+  }
 
-.theme-toggle:hover {
-  opacity: 0.8;
+  .nav-links {
+    gap: 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
 }

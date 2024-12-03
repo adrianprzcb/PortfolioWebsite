@@ -20,6 +20,12 @@
   --section-background: #f8f9fa;
 }
 
+
+html {
+  scroll-padding-top: 5rem; /* Adjust this value based on your navbar's height */
+  scroll-behavior: smooth; /* Ensures smooth scrolling */
+}
+
 /* Global Reset */
 body {
   margin: 0;

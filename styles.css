@@ -153,7 +153,9 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-  .content-section {
+  .content-section-am ,
+  .content-section-ct,
+  .content-section-projects {
     padding: 3rem 1.5rem; /* Smaller padding on smaller screens */
     max-width: 90%; /* Keeps the section responsive */
   }

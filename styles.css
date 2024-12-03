@@ -192,6 +192,7 @@ a:hover {
 
 .exp-text{
   padding-top: 2rem;
+  -ms-text-justify: distribute;
 }
 
 

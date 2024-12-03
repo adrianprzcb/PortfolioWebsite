@@ -22,7 +22,7 @@
 
 
 html {
-  scroll-padding-top: 5rem; /* Adjust this value based on your navbar's height */
+  scroll-padding-top: 7rem; /* Adjust this value based on your navbar's height */
   scroll-behavior: smooth; /* Ensures smooth scrolling */
 }
 

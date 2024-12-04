@@ -90,11 +90,11 @@ a:hover {
   .nav-links {
     flex-wrap: wrap; /* Allow items to wrap if needed */
     justify-content: center; /* Center items */
-    gap: 1rem; /* Adjust spacing between links */
+    gap: 0.5rem; /* Adjust spacing between links */
   }
 
   .nav-links a {
-    font-size: 0.85rem; /* Make text slightly smaller */
+    font-size: 0.6rem; /* Make text slightly smaller */
   }
 
   .theme-toggle {

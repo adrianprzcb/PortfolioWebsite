@@ -261,3 +261,34 @@ footer {
     font-size: 1.1rem;
   }
 }
+
+
+.linkedin-button {
+  display: inline-flex; /* Use flex for better centering */
+  width: 50px; /* Adjust width to your desired button size */
+  height: 50px; /* Match the height */
+  background-color: var(--button-background); /* Button background color */
+  border-radius: 50%; /* Circular button */
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  transition: transform 0.3s, background-color 0.3s; /* Smooth hover effect */
+  text-decoration: none; /* Remove underline for <a> */
+}
+
+.linkedin-button:hover {
+  background-color: var(--button-hover-background); /* Highlight color */
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.linkedin-button img {
+  width: 50%; /* Scale the icon to fit proportionally */
+  height: 50%; /* Ensure the icon is proportional */
+  display: inline-block; /* Ensure it aligns properly */
+}
+
+.linkedin-container {
+  gap: 0.5rem; /* Add space between the text and icon */
+}
+
+

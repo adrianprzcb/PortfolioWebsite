@@ -7,7 +7,6 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
   });
   
-
 // Theme Toggle
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
@@ -20,15 +19,13 @@ if (savedTheme === 'light') {
 }
 
 // Toggle theme on button click
-themeToggle.addEventListener('click', () => {
-  body.classList.toggle('light-theme');
-  const isLightTheme = body.classList.contains('light-theme');
-  themeToggle.textContent = isLightTheme ? '🌙' : '☀️'; // Switch icons
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    body.classList.toggle('light-theme');
+    const isLightTheme = body.classList.contains('light-theme');
+    themeToggle.textContent = isLightTheme ? '🌙' : '☀️'; // Switch icons
 
-  // Save theme choice to localStorage
-  localStorage.setItem('theme', isLightTheme ? 'light' : 'dark');
-
-  console.log('Theme toggle script loaded'); // Log when the script loads
-console.log(themeToggle); // Log the button element
-
-});
+    // Save theme choice to localStorage
+    localStorage.setItem('theme', isLightTheme ? 'light' : 'dark');
+  });
+}

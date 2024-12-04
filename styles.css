@@ -167,19 +167,24 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-  /* Add small padding for visibility */
+  /* Apply padding for all content sections */
   .content-section-am,
   .content-section-projects,
   .content-section-ct {
-    padding: 2rem 0.5rem; /* Add minimal horizontal padding */
+    padding: 2rem 0.8rem; /* Add slightly more padding (0.8rem) */
   }
 
+  /* Specific adjustments for project list */
   .project-list {
-    padding: 0 0.5rem; /* Small padding around the project list */
+    margin: 0 auto;
+    padding: 0 0.8rem; /* Add horizontal padding */
   }
 
+  /* Specific adjustments for project items */
   .project-item {
-    padding: 1rem; /* Ensure inner content remains consistent */
+    margin: 0.5rem auto; /* Center and add space between cards */
+    padding: 1rem; /* Ensure consistent padding within cards */
+    border-radius: var(--border-radius); /* Keep rounded corners visible */
   }
 }
 

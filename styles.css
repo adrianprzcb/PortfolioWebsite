@@ -157,7 +157,13 @@ h2 {
 }
 
 .exp-text {
-  padding-top: 2rem;
+  padding-top: 1rem;
+  
+}
+
+.last-abm{
+  padding-bottom: 1rem;
+
 }
 
 /* Projects Section */

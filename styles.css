@@ -353,3 +353,44 @@ footer {
 }
 
 
+
+
+
+* App Cards */
+.content-section-app {
+  padding: 2rem;
+  margin: 0 auto;
+  background-color: var(--section-background);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Space between image and details */
+  margin-bottom: 2rem; /* Space between app cards */
+  max-width: 700px; /* Limit width for readability */
+}
+
+.app-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0; /* Prevent shrinking of the logo */
+}
+
+.app-details {
+  text-align: left;
+}
+
+.app-details h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--accent-color);
+}
+
+.app-details p {
+  margin: 0.5rem 0 0;
+  color: var(--text-color);
+  font-size: 1rem;
+  line-height: 1.5;
+}

@@ -153,12 +153,12 @@ h2 {
 }
 
 .experience-item {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .exp-text {
   padding-top: 1rem;
-  
+  text-decoration: underline;
 }
 
 .last-abm{

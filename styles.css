@@ -184,13 +184,7 @@ a:hover {
     margin: 1rem auto; /* Space between cards */
   }
 
-  /* Optional: Debugging border to verify layout */
-  .content-section-am,
-  .content-section-projects,
-  .content-section-ct,
-  .project-list {
-    border: 1px dashed red; /* Debugging: Remove after testing */
-  }
+
 }
 
 .content-section-am:hover,

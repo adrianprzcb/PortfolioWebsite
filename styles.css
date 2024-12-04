@@ -80,6 +80,40 @@ a:hover {
   color: var(--accent-hover-color);
 }
 
+
+@media (max-width: 768px) {
+  /* Navbar adjustments */
+  .navbar {
+    padding: 0.5rem 1rem; /* Reduce padding */
+  }
+
+  .nav-links {
+    flex-wrap: wrap; /* Allow items to wrap if needed */
+    justify-content: center; /* Center items */
+    gap: 1rem; /* Adjust spacing between links */
+  }
+
+  .nav-links a {
+    font-size: 0.85rem; /* Make text slightly smaller */
+  }
+
+  .theme-toggle {
+    font-size: 1.2rem; /* Slightly smaller theme toggle */
+  }
+
+  /* Hero adjustments */
+  .hero h1 {
+    font-size: 2rem; /* Adjust for smaller screens */
+  }
+
+  .hero p {
+    font-size: 1rem;
+    padding: 0 1rem; /* Add padding to ensure it fits nicely */
+  }
+}
+
+
+
 .theme-toggle {
   background: none;
   border: none;
@@ -131,6 +165,24 @@ a:hover {
   margin-bottom: 8ch;
   transition: transform 0.3s, border 0.3s;
 }
+
+@media (max-width: 768px) {
+  /* Add small padding for visibility */
+  .content-section-am,
+  .content-section-projects,
+  .content-section-ct {
+    padding: 2rem 0.5rem; /* Add minimal horizontal padding */
+  }
+
+  .project-list {
+    padding: 0 0.5rem; /* Small padding around the project list */
+  }
+
+  .project-item {
+    padding: 1rem; /* Ensure inner content remains consistent */
+  }
+}
+
 
 .content-section-am:hover,
 .content-section-projects:hover,

@@ -1,31 +1,58 @@
-// Smooth scrolling for navigation
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', event => {
-      event.preventDefault();
-      const target = document.querySelector(link.getAttribute('href'));
-      target.scrollIntoView({ behavior: 'smooth' });
-    });
+document.querySelectorAll('nav ul li a').forEach(link => {
+  link.addEventListener('click', event => {
+    const targetHref = link.getAttribute('href');
+
+    // Check if the link is internal (starts with "#")
+    if (targetHref.startsWith('#')) {
+      event.preventDefault(); // Prevent default link behavior
+      const target = document.querySelector(targetHref);
+
+      if (target) {
+        const offset = 100; // Adjust this value to set how much space you want above the title
+        const elementPosition = target.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = elementPosition - offset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth',
+        });
+      } else {
+        console.error(`No element found with ID: ${targetHref}`);
+      }
+    } else {
+      // Allow external links (e.g., "index.html#about") to navigate normally
+      return;
+    }
   });
-  
-// Theme Toggle
+});
+
+
+
+// Theme toggle functionality
 const themeToggle = document.getElementById('theme-toggle');
-const body = document.body;
+const root = document.documentElement; // Select the <html> tag
 
 // Load saved theme from localStorage
 const savedTheme = localStorage.getItem('theme') || 'dark';
+
+// Apply saved theme on page load
 if (savedTheme === 'light') {
-  body.classList.add('light-theme');
-  themeToggle.textContent = '🌙'; // Set to moon icon for light mode
+  root.classList.remove('dark'); // Light theme
+  themeToggle.textContent = '🌙'; // Moon icon for light mode
+} else {
+  root.classList.add('dark'); // Dark theme
+  themeToggle.textContent = '☀️'; // Sun icon for dark mode
 }
 
 // Toggle theme on button click
-if (themeToggle) {
-  themeToggle.addEventListener('click', () => {
-    body.classList.toggle('light-theme');
-    const isLightTheme = body.classList.contains('light-theme');
-    themeToggle.textContent = isLightTheme ? '🌙' : '☀️'; // Switch icons
-
-    // Save theme choice to localStorage
-    localStorage.setItem('theme', isLightTheme ? 'light' : 'dark');
-  });
-}
+themeToggle.addEventListener('click', () => {
+  if (root.classList.contains('dark')) {
+    root.classList.remove('dark'); // Switch to light theme
+    themeToggle.textContent = '🌙'; // Moon icon for light mode
+    localStorage.setItem('theme', 'light'); // Save preference
+  } else {
+    root.classList.add('dark'); // Switch to dark theme
+    themeToggle.textContent = '☀️'; // Sun icon for dark mode
+    localStorage.setItem('theme', 'dark'); // Save preference
+  }
+});

@@ -1,88 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark bg-gray-900 text-gray-100">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Published Android Apps</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="dist/tailwind.css" />
 </head>
-<body>
+<body class="font-sans leading-relaxed bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
   <!-- Navbar -->
-  <header class="navbar">
-    <div class="container">
+  <header class="fixed top-0 w-full bg-white text-gray-900 shadow-lg dark:bg-gray-800 dark:text-gray-100 z-10">
+    <div class="container mx-auto">
       <nav>
-        <ul class="nav-links">
-          <li><a href="index.html#projects#about">About Me</a></li>
-          <li><a href="index.html#projects#projects">Projects</a></li>
-          <li><a href="index.html#projects#contact">Contact</a></li>
+        <ul class="flex justify-center items-center space-x-8 py-4 uppercase tracking-wide text-sm">
           <li>
-            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">☀️</button>
+            <a href="index.html#about" class="hover:text-teal-500 dark:hover:text-teal-300 transition-colors">
+              About Me
+            </a>
+          </li>
+          <li>
+            <a href="index.html#projects" class="hover:text-teal-500 dark:hover:text-teal-300 transition-colors">
+              Projects
+            </a>
+          </li>
+          <li>
+            <a href="index.html#contact" class="hover:text-teal-500 dark:hover:text-teal-300 transition-colors">
+              Contact
+            </a>
+          </li>
+          <li>
+            <button id="theme-toggle" class="text-xl hover:opacity-80 transition-opacity" aria-label="Toggle theme">☀️</button>
           </li>
         </ul>
-      </nav>    
+      </nav>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="hero">
+  <section class="h-screen flex flex-col justify-center items-center text-center px-8 pt-24 bg-gray-100 dark:bg-gray-900">
     <div class="hero-content">
-      <h1 class="logo">Published Android Apps</h1>
-      <p>Explore some of the Android applications I’ve developed and published.</p>
+      <h1 class="text-5xl font-bold mb-4 text-teal-500 dark:text-teal-300">Published Android Apps</h1>
+      <p class="text-xl text-gray-700 dark:text-gray-200">Explore some of the Android applications I’ve developed and published.</p>
     </div>
   </section>
 
-  <main>
+  <main class="pb-16">
     <!-- App 1 -->
-    <section class="content-section-app">
-      <div class="app-card">
-        <img src="logo1.png" alt="App 1 Logo" class="app-logo">
-        <div class="app-details">
-          <h3>App Title 1</h3>
-          <p>Description 1: A brief overview of the app's purpose and features.</p>
+    <section class="max-w-3xl mx-auto bg-white text-gray-900 rounded-xl shadow-lg p-8 my-16 hover:shadow-2xl dark:bg-gray-800 dark:text-gray-100 transition-shadow">
+      <div class="app-card flex items-center space-x-4">
+        <img src="logo1.png" alt="App 1 Logo" class="w-20 h-20 rounded-lg object-cover" />
+        <div class="app-details text-left">
+          <h3 class="text-xl font-semibold text-teal-500 dark:text-teal-300">App Title 1</h3>
+          <p class="mt-1">Description 1: A brief overview of the app's purpose and features.</p>
         </div>
       </div>
     </section>
 
     <!-- App 2 -->
-    <section class="content-section-app">
-      <div class="app-card">
-        <img src="logo2.png" alt="App 2 Logo" class="app-logo">
-        <div class="app-details">
-          <h3>App Title 2</h3>
-          <p>Description 2: A brief overview of the app's purpose and features.</p>
+    <section class="max-w-3xl mx-auto bg-white text-gray-900 rounded-xl shadow-lg p-8 my-16 hover:shadow-2xl dark:bg-gray-800 dark:text-gray-100 transition-shadow">
+      <div class="app-card flex items-center space-x-4">
+        <img src="logo2.png" alt="App 2 Logo" class="w-20 h-20 rounded-lg object-cover" />
+        <div class="app-details text-left">
+          <h3 class="text-xl font-semibold text-teal-500 dark:text-teal-300">App Title 2</h3>
+          <p class="mt-1">Description 2: A brief overview of the app's purpose and features.</p>
         </div>
       </div>
     </section>
 
     <!-- App 3 -->
-    <section class="content-section-app">
-      <div class="app-card">
-        <img src="logo3.png" alt="App 3 Logo" class="app-logo">
-        <div class="app-details">
-          <h3>App Title 3</h3>
-          <p>Description 3: A brief overview of the app's purpose and features.</p>
+    <section class="max-w-3xl mx-auto bg-white text-gray-900 rounded-xl shadow-lg p-8 my-16 hover:shadow-2xl dark:bg-gray-800 dark:text-gray-100 transition-shadow">
+      <div class="app-card flex items-center space-x-4">
+        <img src="logo3.png" alt="App 3 Logo" class="w-20 h-20 rounded-lg object-cover" />
+        <div class="app-details text-left">
+          <h3 class="text-xl font-semibold text-teal-500 dark:text-teal-300">App Title 3</h3>
+          <p class="mt-1">Description 3: A brief overview of the app's purpose and features.</p>
         </div>
       </div>
     </section>
 
     <!-- App 4 -->
-    <section class="content-section-app">
-      <div class="app-card">
-        <img src="logo4.png" alt="App 4 Logo" class="app-logo">
-        <div class="app-details">
-          <h3>App Title 4</h3>
-          <p>Description 4: A brief overview of the app's purpose and features.</p>
+    <section class="max-w-3xl mx-auto bg-white text-gray-900 rounded-xl shadow-lg p-8 my-16 hover:shadow-2xl dark:bg-gray-800 dark:text-gray-100 transition-shadow">
+      <div class="app-card flex items-center space-x-4">
+        <img src="logo4.png" alt="App 4 Logo" class="w-20 h-20 rounded-lg object-cover" />
+        <div class="app-details text-left">
+          <h3 class="text-xl font-semibold text-teal-500 dark:text-teal-300">App Title 4</h3>
+          <p class="mt-1">Description 4: A brief overview of the app's purpose and features.</p>
         </div>
       </div>
     </section>
   </main>
 
   <!-- Footer -->
-  <footer>
+  <footer class="text-center py-4 bg-gray-200 text-gray-700 dark:bg-gray-800 dark:text-gray-400">
     <p>&copy; 2024 Adrián Pérez Cobo. All Rights Reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="scripts.js"></script>
 
 </body>
 </html>
